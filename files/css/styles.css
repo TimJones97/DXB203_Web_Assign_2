@@ -1,0 +1,550 @@
+/*-----------------------------------
+-------------GLOBAL STYLES-------------
+------------------------------------*/
+
+.block {
+  position: relative;
+  color: #3b3b3b; 
+  font-family: 'Raleway', sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.link-no-decoration {
+  text-decoration: none;
+  color: #3b3b3b;
+}
+
+.link-page-navigation {
+  text-decoration: underline;
+  color: #3b3b3b;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.link {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #3b3b3b;
+}
+
+.breadcrumbs {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.main-title {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+/*Make sure the page doesn't allow horizontal scrolling
+ from any overflow*/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0 auto; /* Automatically center the body on screen */
+  font-size: 17px; /* Bump up font size to fix font abonomalities on low DPI screens */
+}
+
+/*-----------------------------------
+-------------HOMEPAGE-------------
+------------------------------------*/
+.blue-overlay {
+  background-color: rgba(0, 42, 93, 0.6);;
+}
+.caption-block {
+  position: relative;
+  background-image: url('../img/homepage.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Make sure homepage image stretches the width of the current screen resolution */
+  height: 100vh;
+  font-family: 'Raleway', sans-serif; 
+  z-index: 1;
+  width: 100%;
+}
+.caption {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+.caption h1 {
+  font-size: 60px;
+  margin-top: 0px;
+  font-weight: 100; 
+  padding-top: 40vh;
+}
+.caption h1 b {
+  font-weight: 400; 
+}
+.caption h3 {
+  font-weight: 100; 
+  width: 50%;
+  margin: 0 auto;
+  line-height: 35px;
+}
+.caption h1,
+.caption h3 { 
+  animation: slideDown ease 0.5s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  -webkit-animation: slideDown ease 0.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+}
+
+@keyframes slideDown{
+  0% {
+  opacity:0;
+  transform:  translate(0px,-25px)  ;
+  }
+  100% {
+  opacity:1;
+  transform:  translate(0px,0px)  ;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+  opacity:0;
+  -webkit-transform:  translate(0px,-25px)  ;
+  }
+  100% {
+  opacity:1;
+  -webkit-transform:  translate(0px,0px)  ;
+  }
+}
+
+.article-snapshots {
+  padding: 0% 3% 3% 3%;
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*REMEMBER TO CLEAR FLOAT*/
+.snapshot {
+  margin: 0 auto;
+  border: 1px solid #d7d7d7;
+  display: block;
+  border-radius: 6px;
+  height: 100%;
+  width: 30%;
+  margin-left: 1.5%; /* 3% leftover from each snapshot block */
+  margin-right: 1.5%;
+  padding-bottom: 20px;
+  float: left;
+}
+
+.snapshot p,
+.snapshot h2 {
+  padding: 15px;
+}
+
+.snapshot-title {
+  height: 70px;
+  font-weight: 400;
+}
+.snapshot-image {
+  width: 100%;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.article-description {
+  height: 175px;  
+  font-weight: 300;
+}
+
+.drop-shadow {
+  /*box-shadow: 0 0 20px 5px rgba(0,0,0,0.2);*/
+}
+
+.view-posts {
+  margin-bottom: 50px;
+}
+
+/*------------------------------
+------------E-MAGAZINE PAGE----------
+-------------------------------*/
+
+.articles {
+  padding: 70px 3% 70px 3%;
+}
+
+.single-article {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.article-image {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.article-title {
+  font-weight: 400;
+}
+
+.post-author {
+  color: #0d55ff;
+}
+
+hr {
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 2px solid #d7d7d7;
+}
+
+.share-social-block {
+  margin: 0 auto;
+  display: block;
+  text-align: center; 
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+}
+
+button {
+  font-family: 'Raleway', sans-serif;
+}
+
+textarea, input {
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  color: #726659;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  resize: none;
+  border: solid 1px #d7d7d7;
+  margin-bottom: 10px;
+  transition: font-size 0.5s;
+}
+
+textarea {
+  height: 130px;
+}
+
+input {
+  height: 25px;
+  margin-top: 30px;
+}
+textarea:hover, input:hover {
+  font-size: 20px;
+}
+select {
+  font-family: "Raleway", sans-serif;
+  outline: 0;
+  background: #f3f3f3;
+  width: 150px;
+  display: block;
+  border: 1px solid #b3aca7;
+  border-radius: 5px;
+  color: #3b3b3b;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.submit-btn {
+  display: block;
+  text-decoration: none;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  letter-spacing: .1em;
+  transition:background 0.5s ease-in-out; 
+  -o-transition:background 0.5s ease-in-out; 
+  -moz-transition:background 0.5s ease-in-out; 
+  -webkit-transition:background 0.5s ease-in-out;
+  border: 1px solid #b3aca7;
+  font-family: 'Raleway', sans-serif;
+  background: transparent;
+  font-size: 15px;
+  color: #3B3B3B;
+  background-color: #fff; 
+  padding: 10px 20px 10px 20px;
+}
+
+.submit-btn:hover, 
+.submit-btn:focus, 
+.submit-btn:active {
+  color: #fff; 
+  background-color: #3B3B3B; 
+  border-color: #fff; 
+  text-decoration: none;
+  font-size: 15px;
+  transition:background 0.5s ease-in-out; 
+  -o-transition:background 0.5s ease-in-out; 
+  -moz-transition:background 0.5s ease-in-out; 
+  -webkit-transition:background 0.5s ease-in-out;
+}
+
+.side-nav {
+  position: fixed;
+  width: 200px;
+  z-index: 1;
+  padding: 10px;
+  right: 0;
+  border-width: 1px 0px 1px 1px;
+  border-radius: 6px 0px 0px 6px;
+  font-family: 'Raleway', sans-serif;
+  border-color: #d7d7d7;
+  border-style: solid;
+  top: 25vh;
+}
+
+.side-nav ul {
+  list-style: none;
+  text-align: left;
+  margin-left: -20px;
+  margin-right: 15px;
+}
+
+.side-nav ul li {
+  margin-bottom: 10px;
+}
+
+.side-nav ul li a {
+  font-size: 14px;
+  color: #b4b4b4;
+}
+
+/*------------------------------
+------------ABOUT PAGE----------
+-------------------------------*/
+
+/* Create two columns for better readability */
+.right, .left {
+  float: left;
+  width: 25%;
+  padding: 0px 2.5% 0px 2.5%;
+  word-wrap: break-word;
+}
+/* Push columns to center of the screen */
+.left {
+  margin-left: 20%;
+}
+.right {
+  margin-right: 20%;
+}
+
+/*Remove the blue default colouring from the HTML link*/
+.source-link {
+  color: #3b3b3b;
+}
+
+.origins-img {
+  margin: 0 auto;
+  display: block;
+  width: 159px; 
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.pull-quote {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  font-size: 25px !important;
+  margin-bottom: 30px;
+  line-height: 50px;
+  width: 80%;
+}
+
+.pull-quote:before,
+.pull-quote:after {
+  content: "“";
+  color: #37C9FA;
+  line-height: 20px;
+  font-size: 50px;
+}
+.pull-quote:before {
+  padding-right: 10px;
+  content: "“";
+}
+.pull-quote:after {
+  padding-left: 20px;
+  content: "”";
+}
+.about-block{
+  text-align: left;
+}
+
+
+/* --------------------------------------
+--------------------Navbar-----------------
+------------------------------------------
+*/
+.navbar {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  z-index: 99;
+  max-height: 70px;
+  width: 100vw;
+  position: fixed; /* Make sure Navbar sticks to the top of the page while scrolling */
+/*  -webkit-transition: all .7s;
+   -moz-transition: all .7s;
+  transition: all .7s;*/
+  /*Use rgba to make background opacity of navbar 
+    transparent but not <li> or <a> elements*/
+  background-color: rgba(253, 253, 253, 0.9);
+}
+
+.left-nav {
+  left: 40px;
+  position: fixed; /* Make the element take up no width */
+}
+
+.logo {
+  width: auto;
+  height: 50px;
+}
+
+.pull-left {
+  left: -80px;
+}
+/* Displays the menu as a centered list, but without the dots */
+.navbar ul {
+  list-style: none;
+  text-align: center;
+}
+
+/* Display elements horizontally instead of vertically */
+.navbar ul li {
+  display: inline-block;
+  margin: 10px 20px 25px 0px;
+}
+
+/* Add a small indicator to the top of the current page menu element */
+.current {
+  border-bottom: 1px solid #0d55ff;
+  background-color: transparent;
+}
+
+.navbar > ul> li > a {
+  display: block;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400; 
+  padding: 15px 0px 5px 0px;
+  text-decoration: none;
+}
+
+.navbar > ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Add light blue hover effect to the Nav elements */
+.navbar > ul > li > a:hover,
+.navbar > ul > li > a:focus,
+.navbar > ul > .current > a:hover,
+.navbar > ul > .current > a:focus {
+  color: #37C9FA;
+  background-color: transparent;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+
+/*-----------------------------------
+---------------- FOOTER --------------
+------------------------------------- */
+footer {
+  color: #E3E3E3;
+  background-color: #000a21; 
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  z-index: 12;
+  -webkit-box-shadow: 0px 4px 64px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 64px -7px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 64px -7px rgba(0,0,0,0.75);
+}
+
+
+/*----------------------------
+-------------SITEMAP----------
+------------------------------*/
+
+/* Remove blue text colour and underline from <a> elements with this class applied */
+.links > li > a,
+.links > span > a,
+.links > a, .links,
+.links:visited{
+  text-decoration: none;
+  color: #E3E3E3;
+  float: left;
+  line-height: 10px;
+}
+
+.links > p > a {
+  text-decoration: none !important;
+  color: #E3E3E3;
+}
+
+.sitemap-text {
+  float: left;
+  margin-left: 10%;
+  line-height: 30px;
+}
+
+.sitemap-text > a {
+  margin-bottom: 9px;
+}
+
+.contact {
+  width: 30%;
+  float: right;
+  line-height: 24px;
+  margin-left: 20%;
+}
