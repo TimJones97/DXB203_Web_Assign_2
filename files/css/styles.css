@@ -497,54 +497,10 @@ select {
 ---------------- FOOTER --------------
 ------------------------------------- */
 footer {
-  color: #E3E3E3;
-  background-color: #000a21; 
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  display: inline-block;
+  z-index: 0;
+  height: 50px;
+  background: white;
+  text-align: center; 
+  color: #9b9b9b;
   font-family: 'Raleway', sans-serif;
-  z-index: 12;
-  -webkit-box-shadow: 0px 4px 64px -7px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 4px 64px -7px rgba(0,0,0,0.75);
-  box-shadow: 0px 4px 64px -7px rgba(0,0,0,0.75);
-}
-
-
-/*----------------------------
--------------SITEMAP----------
-------------------------------*/
-
-/* Remove blue text colour and underline from <a> elements with this class applied */
-.links > li > a,
-.links > span > a,
-.links > a, .links,
-.links:visited{
-  text-decoration: none;
-  color: #E3E3E3;
-  float: left;
-  line-height: 10px;
-}
-
-.links > p > a {
-  text-decoration: none !important;
-  color: #E3E3E3;
-}
-
-.sitemap-text {
-  float: left;
-  margin-left: 10%;
-  line-height: 30px;
-}
-
-.sitemap-text > a {
-  margin-bottom: 9px;
-}
-
-.contact {
-  width: 30%;
-  float: right;
-  line-height: 24px;
-  margin-left: 20%;
 }
