@@ -6,6 +6,7 @@
   position: relative;
   color: #3b3b3b; 
   font-family: 'Raleway', sans-serif;
+  background-image: url('../img/tile.png');
 }
 
 .center {
@@ -60,13 +61,9 @@ p {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
-/*Make sure the page doesn't allow horizontal scrolling
- from any overflow*/
-html {
-  overflow-x: hidden;
-}
 
 body {
+  overflow-x: hidden;/*Make sure the page doesn't allow horizontal scrolling from any overflow*/
   margin: 0 auto; /* Automatically center the body on screen */
   font-size: 17px; /* Bump up font size to fix font abonomalities on low DPI screens */
 }
@@ -156,6 +153,7 @@ body {
 .snapshot {
   margin: 0 auto;
   border: 1px solid #d7d7d7;
+  background: white;
   display: block;
   border-radius: 6px;
   height: 100%;
@@ -189,20 +187,19 @@ body {
   /*box-shadow: 0 0 20px 5px rgba(0,0,0,0.2);*/
 }
 
-.view-posts {
-  margin-bottom: 50px;
-}
-
 /*------------------------------
 ------------E-MAGAZINE PAGE----------
 -------------------------------*/
 
 .articles {
-  padding: 70px 3% 70px 3%;
+  padding: 70px 3% 0px 3%;
+  overflow: hidden;
 }
 
 .single-article {
   width: 60%;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 0 auto;
   display: block;
   margin-bottom: 30px;
@@ -351,7 +348,39 @@ select {
   font-size: 14px;
   color: #b4b4b4;
 }
+/*------------------------------
+------------MEMBERS PAGE----------
+-------------------------------*/
 
+.member-stories {
+  padding: 70px 3% 3% 3%;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.member-img {
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.single-story {
+  margin: 0 auto;
+  width: 60%;
+  margin-bottom: 60px;
+}
+
+.member-name {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
 /*------------------------------
 ------------ABOUT PAGE----------
 -------------------------------*/
@@ -421,8 +450,8 @@ select {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   z-index: 99;
-  max-height: 70px;
-  width: 100vw;
+  height: 70px;
+  width: 100%;
   position: fixed; /* Make sure Navbar sticks to the top of the page while scrolling */
 /*  -webkit-transition: all .7s;
    -moz-transition: all .7s;
@@ -498,9 +527,97 @@ select {
 ------------------------------------- */
 footer {
   z-index: 0;
+  margin-top: 30px; 
   height: 50px;
   background: white;
   text-align: center; 
   color: #9b9b9b;
   font-family: 'Raleway', sans-serif;
+}
+
+/*-----------------------------------
+---------------- MOBILE SCREEN --------------
+--------------- RESOLUTION STYLES ------------
+------------------------------------- */
+
+@media screen and ( max-width: 480px ) { 
+  /*NAVBAR STYLES*/
+  .navbar {
+    height: 100px;
+  }
+
+  .navbar .left-nav li {
+    display: inline-block;
+    margin: 10px 20px 0 0;
+  }
+
+  .navbar ul li {
+    display: inline-block;
+    margin: 0 5px 0px 0px;
+  }
+
+  .left-nav {
+    left: 15px;
+    width: 100%;
+    position: relative;
+  }
+
+  .logo {
+    height: 30px;
+    width: auto;
+  }
+  /*HOMEPAGE STYLES*/
+  .caption h1 {
+    padding-top: 25vh;
+  }
+
+  .caption h3 {
+    width: 80%;
+    margin-top: 20px;
+    line-height: 25px;
+  }
+
+  .snapshot {
+    width: 100%;
+    margin-left: 1.5%; 
+    margin-right: 1.5%;
+    margin-bottom: 30px
+  }
+  /*E-MAGAZINE PAGE STYLES*/
+  .single-article {
+    width: 90%;
+  }
+
+  textarea, input {
+    width: 250px;
+  }
+
+  .side-nav {
+    position: relative;
+    width: 200px;
+    border: 1px solid #d7d7d7;
+    border-radius: 6px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .articles {
+    padding-bottom: 0px;
+  }
+
+  hr {
+    width: 90%;
+  }
+
+  /*MEMBERS PAGE STYLES*/
+  .single-story {
+    width: 90%;
+  }
+
+  .breadcrumbs {
+    width: 90%;
+  }
+
 }
