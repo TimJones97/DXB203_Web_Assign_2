@@ -5,8 +5,10 @@
 .block {
   position: relative;
   color: #3b3b3b; 
+  /*color: white;*/
+  /*background: #efefef;*/
   font-family: 'Raleway', sans-serif;
-  background-image: url('../img/tile.png');
+  /*background-image: url('../img/tile.jpg');*/
 }
 
 .center {
@@ -19,6 +21,19 @@
    display: block; 
    height: 0; 
    clear: both;
+}
+
+.header {
+  position: relative;
+  height: 40vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*margin-bottom: 50px;*/
+  /*border-radius: 0px 0px 6px 6px;*/
+
 }
 
 .link-no-decoration {
@@ -42,24 +57,43 @@
 }
 
 .breadcrumbs {
-  width: 60%;
-  margin: 0 auto;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #dbdbdb;
+  text-align: left;
   margin-bottom: 50px;
 }
 
+.breadcrumb-links {
+  margin: 0 auto;
+  color: #3b3b3b;
+  width: 60%;
+}
 .main-title {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 45px;
+  height: 40vh;
+  line-height: 40vh;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
+  font-family: 'Raleway', sans-serif; 
+  font-weight: 300;
 }
 
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+}
+
+
+b {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
 body {
@@ -68,23 +102,26 @@ body {
   font-size: 17px; /* Bump up font size to fix font abonomalities on low DPI screens */
 }
 
+
 /*-----------------------------------
 -------------HOMEPAGE-------------
 ------------------------------------*/
+
 .blue-overlay {
   background-color: rgba(0, 42, 93, 0.6);;
 }
+
 .caption-block {
   position: relative;
-  background-image: url('../img/homepage.jpeg');
+  background-image: url('../img/homepage.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; /* Make sure homepage image stretches the width of the current screen resolution */
   height: 100vh;
-  font-family: 'Raleway', sans-serif; 
   z-index: 1;
   width: 100%;
 }
+
 .caption {
   position: relative;
   height: 100vh;
@@ -92,21 +129,27 @@ body {
   text-align: center;
   color: #ffffff;
 }
+
 .caption h1 {
   font-size: 60px;
   margin-top: 0px;
   font-weight: 100; 
   padding-top: 40vh;
 }
+
+/* Override default styles for <b> tag */
 .caption h1 b {
-  font-weight: 400; 
+  font-family: 'Raleway', sans-serif; 
+  font-weight: 400;
 }
+
 .caption h3 {
   font-weight: 100; 
   width: 50%;
   margin: 0 auto;
   line-height: 35px;
 }
+
 .caption h1,
 .caption h3 { 
   animation: slideDown ease 0.5s;
@@ -146,14 +189,14 @@ body {
   width: 75%;
   display: block;
   margin: 0 auto;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 /*REMEMBER TO CLEAR FLOAT*/
 .snapshot {
   margin: 0 auto;
   border: 1px solid #d7d7d7;
-  background: white;
+  /*background: white;*/
   display: block;
   border-radius: 6px;
   height: 100%;
@@ -162,6 +205,7 @@ body {
   margin-right: 1.5%;
   padding-bottom: 20px;
   float: left;
+  transition: all 0.5s ease;
 }
 
 .snapshot p,
@@ -178,6 +222,12 @@ body {
   border-radius: 6px 6px 0px 0px;
 }
 
+.snapshot:hover, 
+.snapshot:focus, 
+.snapshot:active {
+  transform: scale(1.05, 1.05);
+}
+
 .article-description {
   height: 175px;  
   font-weight: 300;
@@ -187,12 +237,17 @@ body {
   /*box-shadow: 0 0 20px 5px rgba(0,0,0,0.2);*/
 }
 
-/*------------------------------
+/*---------------------------------
 ------------E-MAGAZINE PAGE----------
 -------------------------------*/
 
+/* Header image */
+.magazine-header {
+  background-image: url('../img/header_images/magazine-header.jpg');
+}
+
 .articles {
-  padding: 70px 3% 0px 3%;
+  padding-top: 70px;
   overflow: hidden;
 }
 
@@ -235,7 +290,10 @@ hr {
   width: 25px;
   height: 25px;
 }
-
+/* Remove the default padding from the left of the <ol> list */
+.article-list {
+  -webkit-padding-start: 15px;
+}
 button {
   font-family: 'Raleway', sans-serif;
 }
@@ -252,7 +310,7 @@ textarea, input {
   resize: none;
   border: solid 1px #d7d7d7;
   margin-bottom: 10px;
-  transition: font-size 0.5s;
+  transition: background-color 0.3s;
 }
 
 textarea {
@@ -264,7 +322,8 @@ input {
   margin-top: 30px;
 }
 textarea:hover, input:hover {
-  font-size: 20px;
+  background: #d9d9d9;
+  color: #e7e7e7;
 }
 select {
   font-family: "Raleway", sans-serif;
@@ -330,7 +389,8 @@ select {
   font-family: 'Raleway', sans-serif;
   border-color: #d7d7d7;
   border-style: solid;
-  top: 25vh;
+  background: white;
+  top: 30vh;
 }
 
 .side-nav ul {
@@ -352,14 +412,18 @@ select {
 ------------MEMBERS PAGE----------
 -------------------------------*/
 
+/* Header image */
+.members-header {
+  background-image: url('../img/header_images/members-header.jpg');
+}
+
 .member-stories {
-  padding: 70px 3% 3% 3%;
+  padding: 70px 0% 3% 0%;
   display: block;
-  margin: 0 auto;
   overflow: hidden;
 }
 
-.member-img {
+.member-img, .contact-img {
   border-radius: 100px;
   width: 200px;
   height: 200px;
@@ -382,72 +446,106 @@ select {
   margin: 0 auto;
 }
 /*------------------------------
+------------CONTACT PAGE----------
+-------------------------------*/
+
+/* Header image */
+.contact-header {
+  background-image: url('../img/header_images/contact-header.jpg');
+}
+
+.contact {
+  padding: 70px 0% 3% 0%;
+  display: block;
+}
+
+.contact-section {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  /*border: solid 1px #d7d7d7;*/
+  /*padding: 2.5%;*/
+}
+
+/* Create two columns */
+.right-col, .left-col {
+  float: left;
+  width: 45%;
+}
+
+/* Remove default margin from top of h2 styles */
+.right-col h2 {
+  margin-top: 0px; 
+}
+/* Override styles from textarea selector on other page */
+.textarea-contact-form {
+  height: 100%;
+}
+/* Override styles from input selector on other page */
+.input-contact-form {
+  margin-top: 0px;
+}
+.contact-img {
+  height: 150px;
+  width: 150px;
+}
+
+/*------------------------------
 ------------ABOUT PAGE----------
 -------------------------------*/
 
-/* Create two columns for better readability */
-.right, .left {
-  float: left;
-  width: 25%;
-  padding: 0px 2.5% 0px 2.5%;
-  word-wrap: break-word;
-}
-/* Push columns to center of the screen */
-.left {
-  margin-left: 20%;
-}
-.right {
-  margin-right: 20%;
+/* Header image */
+.about-header {
+  background-image: url('../img/header_images/about-header.jpg');
 }
 
-/*Remove the blue default colouring from the HTML link*/
-.source-link {
-  color: #3b3b3b;
-}
-
-.origins-img {
-  margin: 0 auto;
+.about {
+  padding: 70px 0% 3% 0%;
   display: block;
-  width: 159px; 
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
-
-.pull-quote {
-  font-family: 'Raleway', sans-serif;
+  text-align: center;
   margin: 0 auto;
-  font-size: 25px !important;
+}
+
+.about-section {
+  text-align: center;
+  word-wrap: break-word;
+  margin: 0 auto;
+  border: 1px solid #d7d7d7;
+  background: white;
+  display: block;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
   margin-bottom: 30px;
-  line-height: 50px;
-  width: 80%;
+  float: left;
+  padding: 10px;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
 }
 
-.pull-quote:before,
-.pull-quote:after {
-  content: "“";
-  color: #37C9FA;
-  line-height: 20px;
-  font-size: 50px;
-}
-.pull-quote:before {
-  padding-right: 10px;
-  content: "“";
-}
-.pull-quote:after {
-  padding-left: 20px;
-  content: "”";
-}
-.about-block{
-  text-align: left;
+.about-section:hover, 
+.about-section:focus, 
+.about-section:active {
+  background: rgba(0, 0, 0, 0.1);
 }
 
+.about-references {
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
+.inline-block {
+  display: inline-block;
+}
 /* --------------------------------------
 --------------------Navbar-----------------
 ------------------------------------------
 */
 .navbar {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   z-index: 99;
   height: 70px;
@@ -459,6 +557,7 @@ select {
   /*Use rgba to make background opacity of navbar 
     transparent but not <li> or <a> elements*/
   background-color: rgba(253, 253, 253, 0.9);
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .left-nav {
@@ -500,6 +599,7 @@ select {
   font-weight: 400; 
   padding: 15px 0px 5px 0px;
   text-decoration: none;
+  transition: .3s ease;
 }
 
 .navbar > ul {
@@ -517,18 +617,18 @@ select {
 .navbar > ul > .current > a:focus {
   color: #37C9FA;
   background-color: transparent;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
 }
 
 
 /*-----------------------------------
 ---------------- FOOTER --------------
 ------------------------------------- */
+
 footer {
   z-index: 0;
   margin-top: 30px; 
   height: 50px;
+  font-size: 12px;
   background: white;
   text-align: center; 
   color: #9b9b9b;
@@ -566,6 +666,7 @@ footer {
     height: 30px;
     width: auto;
   }
+
   /*HOMEPAGE STYLES*/
   .caption h1 {
     padding-top: 25vh;
@@ -589,12 +690,12 @@ footer {
   }
 
   textarea, input {
-    width: 250px;
+    width: 280px;
   }
 
   .side-nav {
     position: relative;
-    width: 200px;
+    width: 280px;
     border: 1px solid #d7d7d7;
     border-radius: 6px;
     height: 100%;
@@ -620,4 +721,22 @@ footer {
     width: 90%;
   }
 
+  /*CONTACT PAGE STYLES*/
+  .contact-section {
+    width: 90%; 
+  }
+  .right-col, .left-col {
+    width: 100%;
+    text-align: center;
+    padding: 0px 2.5% 0px 2.5%;
+  }
+  /* Add some space beneath the contact icons*/
+  .left-col {
+    margin-bottom: 30px;
+  }
+
+  /*ABOUT STYLES*/
+  .about-section {
+    width: 90%;
+  }
 }
