@@ -626,6 +626,24 @@ select {
   background-color: transparent;
 }
 
+/* Menu Icon */
+
+.menuicon {
+  width: 33px;
+  height:  25px;
+  background: url(../img/hamburger_menu.png);
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.collapsed-menu {
+  display: block;
+}
+
+
 
 /*-----------------------------------
 ---------------- FOOTER --------------
@@ -656,7 +674,7 @@ footer {
 
   /*NAVBAR STYLES*/
   .navbar {
-    height: 90px;
+    height: 50px;
   }
 
   .navbar .left-nav li {
@@ -669,8 +687,8 @@ footer {
   }
 
   .navbar ul li {
-    display: inline-block;
-    margin: 0 5px 0px 0px;
+    display: block;
+    margin: 0 35% 0px 35%;
   }
 
   .left-nav {
@@ -682,6 +700,20 @@ footer {
   .logo {
     height: 30px;
     width: auto;
+  }
+
+  .menuicon {
+    display: block;
+  }
+  .navbar:hover .collapsed-menu {
+    display: block;
+  }
+
+  .collapsed-menu {
+    display: none;
+    background-color: rgba(253, 253, 253, 0.9);
+    margin-top: 7px !important;
+    padding-bottom: 20px !important;
   }
 
   /*HEADER STYLES*/
