@@ -73,7 +73,7 @@
 .main-title {
   color: white;
   background: rgba(0, 0, 0, 0.5);
-  font-size: 45px;
+  font-size: 50px;
   height: 40vh;
   line-height: 40vh;
   margin-top: 0px;
@@ -144,7 +144,7 @@ body {
 }
 
 .caption h3 {
-  font-weight: 100; 
+  font-weight: 400; 
   width: 50%;
   margin: 0 auto;
   line-height: 35px;
@@ -211,6 +211,13 @@ body {
 .snapshot p,
 .snapshot h2 {
   padding: 15px;
+}
+
+.snapshot u {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 .snapshot-title {
@@ -382,7 +389,7 @@ select {
   position: fixed;
   width: 200px;
   z-index: 1;
-  padding: 10px;
+  padding: 5px;
   right: 0;
   border-width: 1px 0px 1px 1px;
   border-radius: 6px 0px 0px 6px;
@@ -390,7 +397,7 @@ select {
   border-color: #d7d7d7;
   border-style: solid;
   background: white;
-  top: 30vh;
+  top: 50vh;
 }
 
 .side-nav ul {
@@ -513,7 +520,7 @@ select {
   word-wrap: break-word;
   margin: 0 auto;
   border: 1px solid #d7d7d7;
-  background: white;
+  background: #e7e7e7;
   display: block;
   border-radius: 6px;
   height: 100%;
@@ -528,7 +535,7 @@ select {
 .about-section:hover, 
 .about-section:focus, 
 .about-section:active {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .about-references {
@@ -537,8 +544,8 @@ select {
   overflow: hidden;
 }
 
-.inline-block {
-  display: inline-block;
+.about-references h2 {
+  margin-bottom: 30px;
 }
 /* --------------------------------------
 --------------------Navbar-----------------
@@ -641,14 +648,24 @@ footer {
 ------------------------------------- */
 
 @media screen and ( max-width: 480px ) { 
+
+  /* GENERAL STYLES */
+  body {
+    font-size: 15px;
+  }
+
   /*NAVBAR STYLES*/
   .navbar {
-    height: 100px;
+    height: 90px;
   }
 
   .navbar .left-nav li {
     display: inline-block;
     margin: 10px 20px 0 0;
+  }
+
+  .navbar > ul> li > a {
+    font-size: 16px;
   }
 
   .navbar ul li {
@@ -667,6 +684,12 @@ footer {
     width: auto;
   }
 
+  /*HEADER STYLES*/
+
+  .header {
+    margin-top: 20px;
+  }
+
   /*HOMEPAGE STYLES*/
   .caption h1 {
     padding-top: 25vh;
@@ -677,13 +700,25 @@ footer {
     margin-top: 20px;
     line-height: 25px;
   }
+  .article-snapshots {
+    width: 90%;
+  }
+
+  .snapshot-title {
+    height: 40px;
+  }
+
+  .article-description {
+    height: 120px;
+  }
 
   .snapshot {
     width: 100%;
-    margin-left: 1.5%; 
-    margin-right: 1.5%;
+    margin-left: 0%; 
+    margin-right: 0%;
     margin-bottom: 30px
   }
+
   /*E-MAGAZINE PAGE STYLES*/
   .single-article {
     width: 90%;
@@ -712,12 +747,14 @@ footer {
     width: 90%;
   }
 
-  /*MEMBERS PAGE STYLES*/
-  .single-story {
-    width: 90%;
+  .breadcrumb-links {
+    margin: 0; 
+    padding-left: 15px;
+    text-align: left;
   }
 
-  .breadcrumbs {
+  /*MEMBERS PAGE STYLES*/
+  .single-story {
     width: 90%;
   }
 
@@ -728,7 +765,7 @@ footer {
   .right-col, .left-col {
     width: 100%;
     text-align: center;
-    padding: 0px 2.5% 0px 2.5%;
+    padding: 0px;
   }
   /* Add some space beneath the contact icons*/
   .left-col {
@@ -737,6 +774,10 @@ footer {
 
   /*ABOUT STYLES*/
   .about-section {
+    width: 100%;
+  }
+
+  .about-references {
     width: 90%;
   }
 }
