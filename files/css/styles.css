@@ -7,8 +7,8 @@
   color: #3b3b3b; 
   /*color: white;*/
   /*background: #efefef;*/
-  font-family: 'Raleway', sans-serif;
-  /*background-image: url('../img/tile.jpg');*/
+  font-family: 'Source Sans Pro', sans-serif;
+  background-image: url('../img/tile.png');
 }
 
 .center {
@@ -42,7 +42,8 @@
 }
 
 .link-page-navigation {
-  text-decoration: underline;
+  text-decoration: none;
+  font-weight: 200;
   color: #3b3b3b;
   margin-right: 5px;
   margin-left: 5px;
@@ -76,23 +77,24 @@
   font-size: 50px;
   height: 40vh;
   line-height: 40vh;
+  font-weight: 700;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Raleway', sans-serif; 
-  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
 }
 
 
 b {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
 }
 
@@ -108,7 +110,7 @@ body {
 ------------------------------------*/
 
 .blue-overlay {
-  background-color: rgba(0, 42, 93, 0.6);;
+  background-color: rgba(0, 11, 23, 0.6);
 }
 
 .caption-block {
@@ -131,20 +133,21 @@ body {
 }
 
 .caption h1 {
-  font-size: 60px;
+  font-size: 70px;
   margin-top: 0px;
-  font-weight: 100; 
   padding-top: 40vh;
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Override default styles for <b> tag */
 .caption h1 b {
-  font-family: 'Raleway', sans-serif; 
-  font-weight: 400;
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .caption h3 {
-  font-weight: 400; 
+  font-weight: 200;
   width: 50%;
   margin: 0 auto;
   line-height: 35px;
@@ -165,7 +168,7 @@ body {
 @keyframes slideDown{
   0% {
   opacity:0;
-  transform:  translate(0px,-25px)  ;
+  transform:  translate(0px,-50px)  ;
   }
   100% {
   opacity:1;
@@ -176,7 +179,7 @@ body {
 @-webkit-keyframes slideDown {
   0% {
   opacity:0;
-  -webkit-transform:  translate(0px,-25px)  ;
+  -webkit-transform:  translate(0px,-50px)  ;
   }
   100% {
   opacity:1;
@@ -237,7 +240,7 @@ body {
 
 .article-description {
   height: 175px;  
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .drop-shadow {
@@ -257,7 +260,23 @@ body {
   padding-top: 70px;
   overflow: hidden;
 }
+/* Create two columns */
+.right-col-article, .left-col-article {
+  float: left;
+  width: 49%;
+}
+/* Remove margin from headers with default margins at the top of the new column */
+.remove-margin {
+  -webkit-margin-before: 0.4em;
+  -webkit-margin-after: 0;
+}
+.right-col-article {
+  margin-left: 1%;
+}
 
+.left-col-article {
+  margin-right: 1%;
+}
 .single-article {
   width: 60%;
   padding-left: 10px;
@@ -289,7 +308,8 @@ hr {
 
 .share-social-block {
   margin: 0 auto;
-  display: block;
+  width: 100%;
+  display: inline-block;
   text-align: center; 
 }
 
@@ -302,18 +322,19 @@ hr {
   -webkit-padding-start: 15px;
 }
 button {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 textarea, input {
   padding: 10px 10px 10px 10px;
   width: 100%;
   color: #726659;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
   border-radius: 5px;
   display: block;
   margin: 0 auto;
+  font-weight: 200;
   resize: none;
   border: solid 1px #d7d7d7;
   margin-bottom: 10px;
@@ -333,7 +354,7 @@ textarea:hover, input:hover {
   color: #e7e7e7;
 }
 select {
-  font-family: "Raleway", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   outline: 0;
   background: #f3f3f3;
   width: 150px;
@@ -363,7 +384,7 @@ select {
   -moz-transition:background 0.5s ease-in-out; 
   -webkit-transition:background 0.5s ease-in-out;
   border: 1px solid #b3aca7;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   background: transparent;
   font-size: 15px;
   color: #3B3B3B;
@@ -393,7 +414,7 @@ select {
   right: 0;
   border-width: 1px 0px 1px 1px;
   border-radius: 6px 0px 0px 6px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   border-color: #d7d7d7;
   border-style: solid;
   background: white;
@@ -520,22 +541,26 @@ select {
   word-wrap: break-word;
   margin: 0 auto;
   border: 1px solid #d7d7d7;
-  background: #e7e7e7;
   display: block;
+  color: #e7e7e7;
   border-radius: 6px;
   height: 100%;
   width: 100%;
   margin-bottom: 30px;
   float: left;
-  padding: 10px;
   transition: all 0.5s ease;
-  box-sizing: border-box;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
+.about-section p a {
+  color: #e7e7e7;
+}
 .about-section:hover, 
 .about-section:focus, 
 .about-section:active {
-  background: rgba(0, 0, 0, 0.2);
+  /*background: rgba(0, 0, 0, 0.2);*/
 }
 
 .about-references {
@@ -547,14 +572,84 @@ select {
 .about-references h2 {
   margin-bottom: 30px;
 }
+.black-overlay {
+  padding: 10px;
+  background-color: rgba(0, 11, 23, 0.7);
+  height: 100%;
+  /*margin-top: -17px;*/
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+
+/* Image Backdrops */
+
+.homepage-img {
+  background-image: url('../img/homepage.jpg');
+}
+.article1-img {
+  background-image: url('../img/article1.jpg');
+}
+.article2-img {
+  background-image: url('../img/article2.jpg');
+}
+.article3-img {
+  background-image: url('../img/article3.jpg');
+}
+.article4-img {
+  background-image: url('../img/article4.jpg');
+}
+.fb-img {
+  background-image: url('../img/social_media/fb.png');
+}
+.gplus-img {
+  background-image: url('../img/social_media/googleplus.png');
+}
+.twitter-img {
+  background-image: url('../img/social_media/twitter.png');
+}
+.pinterest-img {
+  background-image: url('../img/social_media/pinterest.png');
+}
+.member1-img {
+  background-image: url('../img/members/member1.jpg');
+}
+.member2-img {
+  background-image: url('../img/members/member2.jpg');
+}
+.member3-img {
+  background-image: url('../img/members/member3.jpg');
+}
+.chat-img {
+  background-image: url('../img/contact_icons/chat.jpg');
+}
+.email-img {
+  background-image: url('../img/contact_icons/email.jpg');
+}
+.phone-img {
+  background-image: url('../img/contact_icons/phone.jpg');
+}
+.magazine-img {
+  background-image: url('../img/header_images/magazine-header.jpg');
+}
+.members-img {
+  background-image: url('../img/header_images/members-header.jpg');
+}
+.contact-img {
+  background-image: url('../img/header_images/contact-header.jpg');
+}
+.about-img {
+  background-image: url('../img/header_images/about-header.jpg');
+}
+
 /* --------------------------------------
 --------------------Navbar-----------------
 ------------------------------------------
 */
 .navbar {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 300;
-  z-index: 99;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  z-index: 10;
   height: 70px;
   width: 100%;
   position: fixed; /* Make sure Navbar sticks to the top of the page while scrolling */
@@ -577,9 +672,6 @@ select {
   height: 50px;
 }
 
-.pull-left {
-  left: -80px;
-}
 /* Displays the menu as a centered list, but without the dots */
 .navbar ul {
   list-style: none;
@@ -603,7 +695,7 @@ select {
   color: black;
   font-size: 18px;
   text-align: center;
-  font-weight: 400; 
+  font-weight: 200; 
   padding: 15px 0px 5px 0px;
   text-decoration: none;
   transition: .3s ease;
@@ -628,7 +720,7 @@ select {
 
 /* Menu Icon */
 
-.menuicon {
+.menu {
   width: 33px;
   height:  25px;
   background: url(../img/hamburger_menu.png);
@@ -636,13 +728,14 @@ select {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 100;
   display: none;
 }
 
 .collapsed-menu {
   display: block;
+  z-index: 101;
 }
-
 
 
 /*-----------------------------------
@@ -657,7 +750,7 @@ footer {
   background: white;
   text-align: center; 
   color: #9b9b9b;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*-----------------------------------
@@ -702,9 +795,10 @@ footer {
     width: auto;
   }
 
-  .menuicon {
+  .menu {
     display: block;
   }
+
   .navbar:hover .collapsed-menu {
     display: block;
   }
@@ -712,14 +806,14 @@ footer {
   .collapsed-menu {
     display: none;
     background-color: rgba(253, 253, 253, 0.9);
-    margin-top: 7px !important;
+    margin-top: 6px !important;
     padding-bottom: 20px !important;
   }
 
   /*HEADER STYLES*/
 
   .header {
-    margin-top: 20px;
+    margin-top: -20px;
   }
 
   /*HOMEPAGE STYLES*/
