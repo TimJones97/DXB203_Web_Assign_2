@@ -46,7 +46,7 @@
 .link-page-navigation {
   text-decoration: underline;
   font-weight: 300;
-  color: #7aa2ed;
+  color: #4299fc;
   margin-right: 5px;
   margin-left: 5px;
 }
@@ -585,12 +585,12 @@ body {
   max-width: 750px;
 }
 
-.about-references h1,
+.about-information h1,
 .about-section h1 {
   -webkit-margin-before: 0em;
 }
 
-.about-references {
+.about-information {
   text-align: left;
   box-sizing: border-box;
   width: 60%;
@@ -824,6 +824,12 @@ body {
   background-image: url('../img/contact_icons/phone.png');
   background-size: auto 100%;
 }
+.magazine-aboutpage-img {
+  background-image: url('../img/about_images/magazine.jpg');
+}
+.purpose-aboutpage-img {
+  background-image: url('../img/about_images/purpose.jpg');
+}
 .magazine-img {
   background-image: url('../img/header_images/magazine-header.jpg');
 }
@@ -886,7 +892,7 @@ body {
 
 /* Add a small indicator to the top of the current page menu element */
 .current {
-  border-bottom: 1px solid #7aa2ed;
+  border-bottom: 1px solid #4299fc;
   background-color: transparent;
 }
 
@@ -955,12 +961,97 @@ footer {
 
 @media screen and ( max-width: 1000px ) { 
 
+  /*-------------NAVBAR STYLES-------------*/
+
+  .navbar .left-nav {
+    left: 15px;
+    margin-top: 10px;
+  }
+  
+  .logo {
+    height: 30px;
+  }
+
+  .navbar .collapsed-menu {
+    padding-left: 100px;
+  }
+
+  .breadcrumb-links {
+    width: 90%;
+  }
+
+  /*-------------HOMEPAGE STYLES-------------*/
+
+  .snapshot {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .snapshot-title {
+    height: 100%;
+  }
+  .article-description {
+    height: 100%;
+  }
+  .article-snapshots {
+    width: 90%;
+  }
+  
+  /*-------------eMAGAZINE PAGE STYLES-------------*/
+
+  .parallax-article-1, 
+  .parallax-article-2, 
+  .parallax-article-3, 
+  .parallax-article-4 {
+    background-attachment: scroll; 
+    width: 90%;
+  }
+
+  .single-article {
+    width: 90%;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
   /* Collapse two columns into one for smaller screen width */
   .right-col-article, .left-col-article {
     width: 100%;
     float: none;
   }
 
+  /*-------------MEMBERS PAGE STYLES-------------*/
+
+  .single-story {
+    width: 90%;
+  }
+
+  .right {
+    right: 0px; 
+  }
+
+  .left {
+    left: 0px; 
+  }
+
+  /*-------------ABOUT PAGE STYLES-------------*/
+
+  .about-information {
+    width: 90%;
+  }
+
+  .purpose-img, .magazine-about-img {
+    background-size: cover;
+  }
+
+  .magazine-about-img {
+    background-position: 81%;
+  }
+
+  /*-------------CONTACT PAGE STYLES-------------*/
+  .contact-section {
+    width: 90%;
+  }
 }
 
 @media screen and ( max-width: 480px ) { 
@@ -1045,7 +1136,7 @@ footer {
     margin-bottom: 30px
   }
 
-  /*-------------E-MAGAZINE PAGE STYLES-------------*/
+  /*-------------eMAGAZINE PAGE STYLES-------------*/
   .single-article {
     width: 90%;
     margin-bottom: 30px;
@@ -1105,6 +1196,34 @@ footer {
     top: -90px;
   }
 
+  /*ABOUT STYLES*/
+
+  .about-title-quote {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .about-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about-information {
+    width: 90%;
+  }
+
+  .purpose-img {
+    background-position: -50% 50%;
+  }
+
+  .magazine-about-img {
+    background-position: 81%;
+  }
+
+  .purpose-img, .magazine-about-img {
+    background-size: cover;
+  }
+
   /*-------------CONTACT PAGE STYLES-------------*/
   .contact-header {
     background-position: 62%; /* Push background left away from text */
@@ -1130,35 +1249,12 @@ footer {
     margin-bottom: 30px;
   }
 
-  /*ABOUT STYLES*/
-  .about-section {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .about-references {
-    width: 90%;
-  }
-
-  .purpose-img {
-    background-position: -50% 50%;
-  }
-
-  .magazine-about-img {
-    background-position: 81%;
-  }
-
-  .purpose-img, .magazine-about-img {
-    background-size: cover;
-  }
-
-
   /*REFERENCES STYLES*/
-  .about-section {
+  .references-section {
     width: 100%;
   }
 
-  .about-references {
+  .references-images {
     width: 90%;
   }
 }
